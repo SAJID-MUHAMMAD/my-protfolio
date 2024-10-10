@@ -66,7 +66,7 @@ const Home = () => {
                     </a>
                   </li>
                   <li>
-                    <a href="http://www.whatsapp.com" target="_blank">
+                    <a href="https://wa.me/+8801798713601" target="_blank">
                       <FaWhatsappSquare className="text-2xl cursor-pointer" />
                     </a>
                   </li>
@@ -86,7 +86,8 @@ const Home = () => {
           </div>
           <div className="md:w-1/2 md:ml-48 md:mt-20 mt-8 order-1">
             <img
-              src={pic}
+              // src={pic}
+              src="./sajid_home.jpg"
               alt=""
               className="rounded-full md:h-[450px] md:w-[450px]"
             />

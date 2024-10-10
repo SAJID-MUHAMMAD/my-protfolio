@@ -11,26 +11,36 @@ const Protfolio = () => {
       id: 1,
       logo: mongodb,
       name: "Mongodb",
+      code: "",
+      liveLink: "",
     },
     {
       id: 2,
       logo: express,
       name: "Express",
+      code: "",
+      liveLink: "",
     },
     {
       id: 3,
       logo: reactjs,
       name: "Reactjs",
+      code: "https://github.com/SAJID-MUHAMMAD/innovet-co-2-sj.git",
+      liveLink: "https://innovet-co-2-sj.vercel.app/",
     },
     {
       id: 4,
       logo: nodejs,
       name: "Nodejs",
+      code: "",
+      liveLink: "",
     },
     {
       id: 5,
       logo: python,
       name: "Python",
+      code: "",
+      liveLink: "",
     },
   ];
   return (
@@ -42,7 +52,7 @@ const Protfolio = () => {
         <h1 className="text-3xl font-bold mb-5">Protfolio</h1>
         <span className=" underline font-semibold">Featured Projects</span>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3 my-5">
-          {cardItems.map(({ id, logo, name }) => (
+          {cardItems.map(({ id, logo, name, code, liveLink }) => (
             <div
               className="md:w-[300px] md:h-[300px] border-[2px] rounded-lg shadow-lg p-1 cursor-pointer hover:scale-110 duration-300"
               key={id}
@@ -59,12 +69,20 @@ const Protfolio = () => {
                 </p>
               </div>
               <div className="px-6 py-4 space-x-3 justify-around">
-                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold px-4 py-2 rounded-xl">
-                  Video
-                </button>
-                <button className="bg-green-500 hover:bg-green-700 text-white font-bold px-4 py-2 rounded-xl">
+                <a
+                  href={liveLink}
+                  target="blank"
+                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold px-4 py-2 rounded-xl"
+                >
+                  Live link
+                </a>
+                <a
+                  href={code}
+                  target="blank"
+                  className="bg-green-500 hover:bg-green-700 text-white font-bold px-4 py-2 rounded-xl"
+                >
                   Source code
-                </button>
+                </a>
               </div>
             </div>
           ))}
